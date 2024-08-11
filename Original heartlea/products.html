@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Skincare Services</title>
+    <link rel="stylesheet" href="products.css">
+    <script>
+        // script.js
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Display response
+    const responseDiv = document.getElementById('form-response');
+    responseDiv.innerHTML = `<p>Thank you, ${name}! Your message has been sent.</p>`;
+
+    // Reset the form
+    this.reset();
+});
+
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Our Skincare Services</h1>
+        <nav>
+            <ul>
+                <li><a href="firstpage.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="services">
+            <h2>Explore Our Services</h2>
+            <div class="service">
+                <h3>Facial Treatments</h3>
+                <p>Our facial treatments are tailored to your skin type, leaving you refreshed and rejuvenated.</p>
+            </div>
+            <div class="service">
+                <h3>Skin Analysis</h3>
+                <p>Our experts analyze your skin to recommend the best products and treatments for you.</p>
+            </div>
+            <div class="service">
+                <h3>Anti-Aging Solutions</h3>
+                <p>We offer a variety of anti-aging treatments to help you look youthful and vibrant.</p>
+            </div>
+            <div class="service">
+                <h3>Acne Treatment</h3>
+                <p>Our specialized acne treatments target breakouts and help you achieve clear skin.</p>
+            </div>
+            <div class="service">
+                <h3>Hydration Therapy</h3>
+                <p>Experience deep hydration with our moisturizing treatments tailored to your skin's needs.</p>
+            </div>
+        </section>
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message
+                    
